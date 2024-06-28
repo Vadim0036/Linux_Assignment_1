@@ -1,0 +1,41 @@
+Where does a C++ program begin is execution?
+The first function in the file
+The first function by alphabetic order of names
+The function main( )
+The function specified in the #DEFINE FirstFunction
+
+How many values can be returned from a function by means of the "return" statement?
+1
+2
+3
+Lots and Lots
+
+Which loop type is guaranteed to execute at least once?
+for
+while
+do...while
+all the above
+
+Arrays are passed to functions by:
+reference
+value
+either method
+neither method
+
+Global variables should be used...
+in place of function parameters
+only when absolutely needed
+never
+only during the full moon
+
+When storing a floating point value to an integer type variable, the fractional part is:
+rounded up
+rounded down
+branched
+truncated
+
+Which of the following is NOT a reason for writing functions?
+modularity
+reusability
+easier testing and verification
+reduced code size
