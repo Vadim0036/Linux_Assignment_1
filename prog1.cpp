@@ -19,36 +19,56 @@ void sort_score();                                                              
 
 
 // ADDITIONAL FUNCTIONS
-void select_random_questions(int seed);                                    // Validates and picks 6 random questions collecting them in 1D random_questions[] array
+void select_random_questions(int seed);                                                                   // Validates and picks 6 random questions collecting them in 1D random_questions[] array
 
-bool is_player_correct(int question_number, char player_response);         // Determines whether user answered question correctly or not
+bool is_player_correct(int question_number, char player_response);                                        // Determines whether user answered question correctly or not
 
-bool offer_second_try();                                                   // Offers to skip the question or try it second time, in case of agreement to try second time function returns true otherwise false
+bool offer_second_try();                                                                                  // Offers to skip the question or try it second time, in case of agreement to try second time function returns true otherwise false
 
-void score_player(bool second_try, bool isCorrect, int* number_score);     // Scores the player based on the performence 
+void score_player(bool second_try, bool isCorrect, int* number_score);                                    // Scores the player based on the performence 
 
-bool validate_input_files();                                               // Validates the input files, so files match program requirements
+bool validate_input_files();                                                                              // Validates the input files, so files match program requirements
 
-void record_player_result(int score, string user_name);                    // Appands new player and the score to the summary text file
+void record_player_result(int score, string user_name);                                                   // Appands new player and the score to the summary text file
 
-void show_leaderboard();                                                   // After game is over, this function will show the score board taken from summary.txt file
+void show_leaderboard();                                                                                  // After game is over, this function will show the score board taken from summary.txt file
 
-void determine_position(string name, int points);                          // At the end of the game determines players position on leader board
+void determine_position(string name, int points);                                                         // At the end of the game determines players position on leader board
 
-bool isLineEmpty(string current_line);                                     // Checks if the current line of the file empty or not 
+bool isLineEmpty(string current_line);                                                                    // Checks if the current line of the file empty or not 
 
-string toUpper(string text);                                               // Used as collateral function to transform low case string into upper
+string toUpper(string text);                                                                              // Used as collateral function to transform low case string into upper
+
+
+// GLOBAL VARIABLES    
+const int NUMBER_QUESTIONS = 50;                                                                          // Number of questions sets in t// Determines whether user answered question correctly or not
+
+bool offer_second_try();                                                                                  // Offers to skip the question or try it second time, in case of agreement to try second time function returns true otherwise false
+
+void score_player(bool second_try, bool isCorrect, int* number_score);                                    // Scores the player based on the performence 
+
+bool validate_input_files();                                                                              // Validates the input files, so files match program requirements
+
+void record_player_result(int score, string user_name);                                                   // Appands new player and the score to the summary text file
+
+void show_leaderboard();                                                                                  // After game is over, this function will show the score board taken from summary.txt file
+
+void determine_position(string name, int points);                                                         // At the end of the game determines players position on leader board
+
+bool isLineEmpty(string current_line);                                                                    // Checks if the current line of the file empty or not 
+
+string toUpper(string text);                                                                              // Used as collateral function to transform low case string into upper
 
 
 // GLOBAL VARIABLES
-const int NUMBER_QUESTIONS = 50;                                           // Number of questions sets in text file ( Global Variable )
-const int NUMBER_ANSWERS =  NUMBER_QUESTIONS;                              // Number of answers in answers text file  ( Global Variable )
+const int NUMBER_QUESTIONS = 50;                                                                          // Number of questions sets in text file ( Global Variable )
+const int NUMBER_ANSWERS =  NUMBER_QUESTIONS;                                                             // Number of answers in answers text file  ( Global Variable )
 
-string questions[NUMBER_QUESTIONS][5];                                     // 2D array that contains questions and responses ( Global Variable )
-char answers[NUMBER_ANSWERS];                                              // 1D array that contains correct answers ( Global Variable )
-int random_questions[6];                                                   // 1D array that contains 6 random integers which represent 6 random indexes of questions picked and validated by function select_random_question();
+string questions[NUMBER_QUESTIONS][5];                                                                    // 2D array that contains questions and responses ( Global Variable )
+char answers[NUMBER_ANSWERS];                                                                             // 1D array that contains correct answers ( Global Variable )
+int random_questions[6];                                                                                  // 1D array that contains 6 random integers which represent 6 random indexes of questions picked and validated by function select_random_question();
 
-int scores[6] = {0,0,0,0,0,0};                                             // 1D array that contains scores for each answered question; it is used to easily calculate player score at the end of the quiz
+int scores[6] = {0,0,0,0,0,0};                                                                            // 1D array that contains scores for each answered question; it is used to easily calculate player score at the end of the quiz
 
 
 int main(int argc, char* argv[]){
